@@ -33,7 +33,7 @@ def delete(master_id):
         return {"message": "Not found"}, 404
     return {"message": "Deleted"}, 200
 
-@master_bp.route("s", methods=["GET"])
+@master_bp.route("", methods=["GET"])
 @jwt_required()
 @rank_required("Padawan")
 def list_masters():
